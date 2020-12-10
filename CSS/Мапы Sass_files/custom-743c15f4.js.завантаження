@@ -1,0 +1,11 @@
+$(function() { if ($("#mobi-nav").mmenu({ extensions: ["effect-slide-menu", "effect-slide-panels-100", "theme-dark"], counters: !0, navbar: { title: "\u041d\u0430\u0432\u0438\u0433\u0430\u0446\u0438\u044f \u043f\u043e \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u0446\u0438\u0438" }, navbars: [{ position: "top", content: ["prev", "title", "close"] }] }), 
+	$(".chapter-menu a").each(function () {
+		let parent = $(this).parent();
+		if($(this).attr('href') === './') parent.addClass('active');
+	}),
+	$(".chapter-menu li").each(function() { var t = $(this).find("ul").length;
+            t > 0 && $(this).addClass("parent") }), $(window).width() > 990) { var t = $(window).height(),
+            e = t - $("header").height(),
+            i = $(".chapter-menu").find("li.active").offset().top;
+        $("body").height(t), $("aside, main").height(e), $(window).resize(function() { t = $(window).height(), $("body").height(t), $("aside, main").height(e) }), setTimeout(function() { if (i > t) { var e = t / 2 + (i - t);
+                $("aside").scrollTop(e) } }, 100) } });

@@ -1,0 +1,44 @@
+header, aside, main, footer{		/*Спільні значення, винесено в окрему конструкцію*/
+	padding-top: 30px; 
+	text-align: center; 
+}
+
+
+
+
+
+		header{
+			background-color: darkcyan; 
+			width: 400px; height: 100px; 
+			margin: 10px auto;
+		}
+		
+		
+		div {
+			width: 400px; 
+			margin: 10px auto;
+		}
+		
+		
+		
+		
+		aside{background-color: darkred; 
+			height: 300px; 
+			width: 100px; 
+			float: left;
+		}
+		
+		
+		
+		main{background-color: aqua; 
+			height: 300px; 
+			margin: 10px auto;
+		}
+		
+		
+		footer{background-color: mediumspringgreen; 
+			width: 400px; 
+			height: 100px;			
+			margin: 10px auto;
+		}
+		

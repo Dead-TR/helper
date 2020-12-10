@@ -1,0 +1,80 @@
+:hover	-	-	-- при наведенн≥
+:focus	-	-	-- у фокус≥
+:active	-	-	-- активний
+
+:first-child	-	--перший доч≥рн≥й
+:first-of-type	-	-- доч≥рн≥й елемент, конкретного типу
+:last-child	-	-- останн≥й доч≥рн≥й
+:last-of-type	-	-- останн≥й доч≥рн≥й-вказаного-типу
+:not()	-	-	-- вс≥, що не мають вказаного в дужках селектора
+:nth-child()	-	-- доч≥рн≥, вказан≥ у дужках
+:nth-last-child()	-- доч≥рн≥ з к≥нц€
+
+
+
+:any
+:any-link
+:checked
+:default
+:defined
+:dir()
+:disabled
+:empty
+:enabled
+:first
+:fullscreen
+:indeterminate
+:in-range
+:invalid
+:lang()
+:left
+:link
+:nth-last-of-type()	--
+:nth-of-type()
+:only-child
+:only-of-type
+:optional
+:out-of-range
+:read-only
+:read-write
+:required
+:right
+:root
+:scope
+:target
+:valid
+:visited
+
+
+
+::after	-	-	-- п≥сл€
+::before	-	-- до
+::cue
+::first-letter
+::first-line
+::selection
+::slotted
+::backdrop 
+::placeholder -	-	-- “екст в пол≥ Input
+::marker 
+::spelling-error 
+::grammar-error 
+
+
+
+
+
+
+
+
+
+.element:nth-child(2):before {
+    content: "2";
+}
+
+
+
+
+
+
+

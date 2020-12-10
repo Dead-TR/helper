@@ -1,0 +1,38 @@
+		div {
+			display: flex;
+			m/*argin: auto*/;
+		}
+
+
+		header{
+		
+			background-color: darkcyan; 
+			 margin: auto;
+			text-align: center; 
+			
+		}
+		
+		
+		
+		aside{background-color: darkred; 
+			text-align: center; 
+			margin: auto;
+		}
+		
+		
+		
+		main{background-color: aqua; 
+		    text-align: center;
+			margin: auto;
+		
+		}
+		
+		
+		footer{background-color: mediumspringgreen; 
+			padding: 1px;
+			 margin: auto;
+			text-align: center; 
+		
+			
+		}
+		
