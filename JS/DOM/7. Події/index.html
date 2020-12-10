@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Документ без названия</title>
+	<style>
+		h1 {
+			color: inherit;
+		}
+	/*darkmagenta
+		teal*/
+	</style>
+</head>
+
+<body>
+
+	
+
+	
+	<h1 onClick="this.innerHTML = '1-й Замінений текст.'">Клік</h1><!--JS записано прямо у тегові---->
+	
+	
+	
+	<h1 onClick="changeText(this)">Клік2</h1> 
+								<!----this потрібен для того, щоб викликати функцію негайно після кліка----->
+	
+	
+	<h1 id="title">Клік3</h1> 
+	
+	<br><hr><br>
+
+	
+	
+	<p>Найчастіші події:</p>
+	<ul>
+		<li>onClick -- Клік по елементові</li>
+		<li>onload -- Коли завантажився документ, або частина документа</li>
+		<li>onchange -- Для перемикачів</li>
+		<li>onMouseOver / onMouseOut -- миша в зоні/за її межами</li> 
+		<li>onMouseDown / onMouseUp -- ? після відпускання клавіші миші (Натис/Відпустив)</li>
+		<li>onKeyDown / onKeyPress / onKeyUp -- Натис на кнопку/натиснута/відпустив</li>
+		<li>onfocus / onblur -- коли елемент в фокусі/не в фокусі</li>
+		<li></li>
+	</ul>
+	<br>
+<br><hr><br><br>
+
+	
+	<h1 onMouseOver="style.color='darkmagenta'" onMouseOut="style.color='teal'">Наведення</h1><br><br>
+
+	
+	<input type="text" onFocus="NameFunction(this)">
+	
+	
+	
+	<div id="brndafd2107c7">REMOVE</div>
+	
+	
+	
+	
+	
+<script src="main.js"></script>
+</body>
+</html>

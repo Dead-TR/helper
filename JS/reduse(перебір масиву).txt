@@ -1,0 +1,13 @@
+function persistence(num) {
+var hMuch = 0;
+
+while(true){
+  num=''+num;
+  num= num.split('');
+  const sum = num.reduce((total,amount) => total*amount);
+  num=sum;
+if (num.length==1) {return hMuch;}
+  hMuch++;
+}
+
+}
