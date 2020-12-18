@@ -1,0 +1,4 @@
+heroku login                                  -- Логування на хероку
+heroku git:remote -a project-name             -- Підключення до хероку
+git add. commit ''                            -- Збереження змін
+git push heroku branch:master                 -- Пуш з гілки branch на гілку master
