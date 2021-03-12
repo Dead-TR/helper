@@ -1,0 +1,16 @@
+body {/* Стандартні стилі */ 
+  --color-background: #{colors.$white};
+  --color-text: #{colors.$black};
+  --light-mode-1: #{colors.$light-mode-1};
+  --light-mode-2: #{colors.$light-mode-2};
+  --light-mode-3: #{colors.$light-mode-3};
+} 
+
+
+.dark {/* Переназначені стилі. Навішуються на body, перекриваючи його стандартні змінні */ 
+  --light-mode-1: #{colors.$dark-mode-1};
+  --light-mode-2: #{colors.$dark-mode-2};
+  --light-mode-3: #{colors.$dark-mode-3};
+  --color-text: #{colors.$white};
+  --color-background: #{colors.$black};
+}
