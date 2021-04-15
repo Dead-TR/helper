@@ -27,7 +27,7 @@ function NameFunction(elem){
 }
 
 
-
+event.stopPropagation() // --- зупинити випливання подій
 
 
 
