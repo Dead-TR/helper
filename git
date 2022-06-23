@@ -6,3 +6,6 @@ git stash -- Тимчасове збереження змін
 git stash list -- Показує що зміни збережено
 git stash apply -- Переносить збережені зміни у обрану гілку
 git stash drop -- Видаляє збережені зміни
+
+git branch -D branch -- Видалити локальну гілку {branch}
+git push origin --delete branch -- Видалити віддалену ліку {origin/branch}
