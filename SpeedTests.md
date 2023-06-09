@@ -40,13 +40,15 @@ const test = () => {
   }
   console.timeEnd("forIn");
 
+  const arr = Object.keys(obj);
+
   console.time("forOf");
-  for (let [key, value] of Object.entries(obj)) {
-    const v = value;
+  for (let key of arr) {
+    const value = obj[key];
   }
   console.timeEnd("forOf");
 
-  const arr = Object.keys(obj);
+
   console.time("forEach");
   arr.forEach((key) => {
     const v = obj[key];
@@ -64,20 +66,20 @@ test()
 ```
 
 Result:
-- values:          13.155029296875 ms 555.541015625 ms     3947.8818359375 ms
-- keys:            2.906982421875 ms  209.177001953125 ms  1374.55712890625 ms
-- keys+map:        4.521728515625 ms  291.50830078125 ms   1878.946044921875 ms
-- keys+map-arr:                                            2157.329833984375 ms
-- entries:         6.6611328125 ms    874.201171875 ms     7030.852783203125 ms
+- values:          3.602783203125 ms  565.6630859375 ms    3855.447021484375 ms
+- keys:            1.0400390625 ms    236.793212890625 ms  1439.033203125 ms
+- keys+map:        1.571044921875 ms  337.56396484375 ms   1878.81884765625 ms
+- keys+map-arr:    2.3701171875 ms    518.314208984375 ms  3639.506103515625 ms
+- entries:         2.87890625 ms      1417.2490234375 ms   19497.90283203125 ms
 
-- hasOwnProperty:  0.009033203125 ms  34.9169921875 ms     138.2109375 ms
-- is:              0.002197265625 ms  0.00390625 ms        0.00390625 ms
+- hasOwnProperty:  0.007080078125 ms  34.61083984375 ms     257.613037109375 ms
+- is:              0.000732421875 ms  0.003173828125 ms     0.003173828125 ms
 
-- forIn:           2.7080078125 ms    276.986328125 ms     1607.489013671875 ms
-- forOf:           5.81005859375 ms   765.8310546875 ms    6135.1279296875 ms
+- forIn:           1.8232421875 ms    275.508056640625 ms   1640.68701171875 ms
+- forOf:           0.401123046875 ms  109.1201171875 ms     612.98681640625 ms
 
-- forEach:         0.60595703125 ms   58.202880859375 ms   378.385009765625 ms
-- for:             0.505859375 ms     56.57421875 ms       328.901123046875 ms
+- forEach:         0.4990234375 ms    66.9619140625 ms      367.650146484375 ms
+- for:             0.385009765625 ms    56.57421875 ms      310.1142578125 ms
 
 
 
