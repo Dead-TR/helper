@@ -1,0 +1,84 @@
+```js
+const obj = {}
+for(let i =0; i < 10000; i++){ //1000000 // 5000000
+    obj['t' + i] = i
+}
+
+const test = () => {
+  console.time("values");
+  Object.values(obj);
+  console.timeEnd("values");
+
+  console.time("keys");
+  Object.keys(obj);
+  console.timeEnd("keys");
+
+  console.time("keys+map");
+  Object.keys(obj).map((key) => obj[key]);
+  console.timeEnd("keys+map");
+
+
+  console.time("keys+map-arr");
+  Object.keys(obj).map((key) => [key, obj[key]]);
+  console.timeEnd("keys+map-arr");
+
+  console.time("entries");
+  Object.entries(obj);
+  console.timeEnd("entries");
+
+  console.time("hasOwnProperty");
+  Object.prototype.hasOwnProperty(obj, "t7");
+  console.timeEnd("hasOwnProperty");
+
+  console.time("is");
+  const t = obj["t7"];
+  console.timeEnd("is");
+
+  console.time("forIn");
+  for (let key in obj) {
+    const value = obj[key];
+  }
+  console.timeEnd("forIn");
+
+  console.time("forOf");
+  for (let [key, value] of Object.entries(obj)) {
+    const v = value;
+  }
+  console.timeEnd("forOf");
+
+  const arr = Object.keys(obj);
+  console.time("forEach");
+  arr.forEach((key) => {
+    const v = obj[key];
+  });
+  console.timeEnd("forEach");
+
+  console.time("for");
+  for (let i = 0; i < arr.length; i++) {
+    const key = arr[i];
+    const v = obj[key]
+  }
+  console.timeEnd("for");
+};
+test()
+```
+
+Result:
+- values:          13.155029296875 ms 555.541015625 ms     3947.8818359375 ms
+- keys:            2.906982421875 ms  209.177001953125 ms  1374.55712890625 ms
+- keys+map:        4.521728515625 ms  291.50830078125 ms   1878.946044921875 ms
+- keys+map-arr:                                            2157.329833984375 ms
+- entries:         6.6611328125 ms    874.201171875 ms     7030.852783203125 ms
+
+- hasOwnProperty:  0.009033203125 ms  34.9169921875 ms     138.2109375 ms
+- is:              0.002197265625 ms  0.00390625 ms        0.00390625 ms
+
+- forIn:           2.7080078125 ms    276.986328125 ms     1607.489013671875 ms
+- forOf:           5.81005859375 ms   765.8310546875 ms    6135.1279296875 ms
+
+- forEach:         0.60595703125 ms   58.202880859375 ms   378.385009765625 ms
+- for:             0.505859375 ms     56.57421875 ms       328.901123046875 ms
+
+
+
+
