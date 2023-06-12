@@ -84,4 +84,37 @@ Result:
 ```
 
 
+```js
+const tilda = (v) => {
+  return ~~v;
+};
+
+const floor = (v) => {
+  return Math.floor(v);
+};
+
+const fixed = (v) => {
+  return v.toFixed(0);
+};
+
+const floorFixed = (v) => {
+  return "" + floor(v);
+};
+
+[tilda, floor, fixed, floorFixed].forEach((f) => {
+  console.time(f.name);
+  for (let i = 0; i < 1000000; i++) {
+    //1000000 // 5000000
+    const v = 1 / i;
+    f(v);
+  }
+  console.timeEnd(f.name);
+});
+```
+```
+ tilda: 2.337890625 ms
+ floor: 54.85400390625 ms
+ fixed: 159.72900390625 ms
+ floorFixed: 35.4140625 ms
+```
 
