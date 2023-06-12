@@ -1,3 +1,4 @@
+## Circle:
 ```js
 const obj = {}
 for(let i =0; i < 10000; i++){ //1000000 // 5000000
@@ -83,6 +84,7 @@ Result:
 - for:             0.385009765625 ms    56.57421875 ms      310.1142578125 ms
 ```
 
+## Fixed:
 
 ```js
 const tilda = (v) => {
@@ -104,7 +106,6 @@ const floorFixed = (v) => {
 [tilda, floor, fixed, floorFixed].forEach((f) => {
   console.time(f.name);
   for (let i = 0; i < 1000000; i++) {
-    //1000000 // 5000000
     const v = 1 / i;
     f(v);
   }
