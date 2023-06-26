@@ -9,3 +9,5 @@ git stash drop -- Видаляє збережені зміни
 
 git branch -D Branch -- Видалити локальну гілку {Branch}
 git push origin --delete Branch -- Видалити віддалену ліку {origin/Branch}
+
+https://mate-academy.github.io/fe-program/tools/git/useful-commands
