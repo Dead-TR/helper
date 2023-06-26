@@ -2,12 +2,50 @@
 ```git remote -v```
 
 Зберегти зміни у іншу гілку:
-git stash -- Тимчасове збереження змін
-git stash list -- Показує що зміни збережено
-git stash apply -- Переносить збережені зміни у обрану гілку
-git stash drop -- Видаляє збережені зміни
+git stash                                     Тимчасове збереження змін
+git stash list                                Показує що зміни збережено
+git stash apply                               Переносить збережені зміни у обрану гілку
+git stash drop                                Видаляє збережені зміни
 
-git branch -D Branch -- Видалити локальну гілку {Branch}
-git push origin --delete Branch -- Видалити віддалену ліку {origin/Branch}
+git branch -D Branch                          Видалити локальну гілку {Branch}
+git push origin --delete Branch               Видалити віддалену ліку {origin/Branch}
 
-https://mate-academy.github.io/fe-program/tools/git/useful-commands
+git config --global	
+git clone repo_url	                          clone an existing repo
+git init	                                    initialize new git repo in current folder
+git status	                                  show info about the repo
+git add ./path/to/files	                      prepare changes for saving
+git commit                                    save changes and open text editor
+git commit -m 'a commit message'              save changes with a message
+git commit -am 'a commit message'             prepare all changed files and save with a message
+git commit -am --amend 'a commit message'     replace the last commit
+git log                                       show the commits history
+git checkout commit_hash                      switch to the specified commit
+git tag                                       list all existing tags
+git tag tag-name                              create a tag tag-name for current commit
+git tag -d tag-name                           delete a tag tag-name
+git checkout tag-name                         switch to the commit specified by the tag-name
+git branch                                    show a list of all the local branches
+git branch branch_name                        create a new branch_name branch
+git branch -D branch_name                     delete a branch branch_name
+git switch branch_name                        --- the same as previous
+git checkout -b branch_name                   create a branch at current commit and activate it
+git switch -c branch_name                     --- the same as previous
+git merge branch_name                         merge branch_name into current branch
+git rebase branch_name                        rebuild current branch on top of branch_name
+git rebase -i branch_name                     run rebase with ability to choose commits and squash them
+git restore file_name                         reset changes not prepared for commit in file_name
+git restore file_name                         reset changes not prepared for commit in file_name
+git restore --staged file_name                remove changes in file_name from prepared for commit
+git restore --staged --worktree file_name     reset all the changes in file_name
+git reset commit_hash                         Move current branch back to a specified commit keeping changes in files
+git reset commit_hash --hard                  Move current branch back to a specified commit deleting changes in files
+git reset HEAD^^                              Move current branch 2 commits back
+git revert commit_hash                        Create a new commit with changes reverting commit_hash commit
+git remote                                    show a list of remote servers
+git remote show server_alias                  shows the detailed info about a server
+git remote add server_alias repo_url          adds a new alias for a server with given repo_url
+git remote remove server_alias                disconnects from a server
+git push server_alias branch_name             send the branch_name to server_alias
+git fetch server_alias branch_name            downloads the changes without merging them to local branch
+git pull server_alias branch_name             downloads and merges changes
