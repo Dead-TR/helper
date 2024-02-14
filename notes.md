@@ -2,7 +2,7 @@
   - ssh користувач@сервер
 
 ### NGINX
-	Інсталяція
+ #### Інсталяція
 ```
  sudo apt update
  sudo apt install nginx
