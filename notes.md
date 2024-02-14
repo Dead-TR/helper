@@ -19,7 +19,7 @@ systemctl stop nginx		-- Зупинити
 
 systemctl start nginx		-- Запустити
 
-## - nginx react config
+ ## nginx react config
 
 ```php
 server {
