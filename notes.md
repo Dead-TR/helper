@@ -2,14 +2,20 @@
   - ssh користувач@сервер
 
 ### NGINX
-	#### Інсталяція
+	Інсталяція
+```
  sudo apt update
  sudo apt install nginx
+```
 
 nginx -t 			-- Перевірити конфіг файл
+
 systemctl restart nginx		-- Перезавантажити
+
 systemctl status nginx		-- перевірити статус
+
 systemctl stop nginx		-- Зупинити
+
 systemctl start nginx		-- Запустити
 
 ### Розрахунок оперативної пам'яті на одне зображення Формула:
