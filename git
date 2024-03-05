@@ -1,6 +1,12 @@
 Отримати посилання на репозиторій:
 ```git remote -v```
 
+Підключити репозиторій
+ - SSH:
+    ```bash
+git remote add origin https://maileroo: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@github.com/maileroo/template-builder.git
+```
+
 Зберегти зміни у іншу гілку:
 git stash                                     Тимчасове збереження змін
 git stash list                                Показує що зміни збережено
