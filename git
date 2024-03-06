@@ -4,7 +4,7 @@
 Підключити репозиторій
  - По токену (генерується в налаштуваннях репо):
     ```bash
-git remote add origin https://maileroo:КЛЮЧ@github.com/maileroo/template-builder.git
+git remote add origin https://автор:КЛЮЧ@github.com/автор/репо.git
 ```
 
 Зберегти зміни у іншу гілку:
