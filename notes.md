@@ -20,6 +20,9 @@ systemctl stop nginx		-- Зупинити
 systemctl start nginx		-- Запустити
 
  ## nginx react config
+ ### file path:
+   *  ```/etc/nginx/enginx.conf```
+   *  ```/etc/nginx/```
 
 ```php
 server {
@@ -31,7 +34,7 @@ server {
 
 	# Add index.php to the list if you are using PHP
 	index index.html /index.html;
-
+        error_page 500 502 503 403 504 =200 /index.html;
 	server_name name;
 
 	location / {
