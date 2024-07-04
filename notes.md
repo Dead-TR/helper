@@ -21,8 +21,9 @@ systemctl start nginx		-- Запустити
 
  ## nginx react config
  ### file path:
-   *  ```/etc/nginx/enginx.conf```
-   *  ```/etc/nginx/sites-enabled```
+   *  ```/etc/nginx/enginx.conf``` (http end)
+   *  ```/etc/nginx/sites-enabled/default```
+   *  ```/etc/nginx/sites-available/default```
 
 ```php
 server {
